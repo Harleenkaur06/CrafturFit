@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Works</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #ffe5ec, #fff5f9);
+      padding-bottom: 40px;
+    }
+
+    /* ✅ HEADER */
+    header {
+      width: 100%;
+      padding: 25px 40px;
+      background: linear-gradient(to right, #ff4b28, #ff228c);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    header h1 {
+      font-size: 55px;
+      background: linear-gradient(to right, #ffb8c6, #ffe0e8, #fff7d1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: float 3s ease-in-out infinite;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
+
+    .tagline {
+      font-size: 16px;
+      color: #fffbe9;
+      letter-spacing: 1px;
+      margin-top: -5px;
+    }
+
+    /* ✅ NAVIGATION CAPSULE BUTTONS */
+    .nav-menu {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.25);
+      padding: 12px 26px;
+      border-radius: 999px; /* capsule shape 💊 */
+      color: white;
+      font-size: 17px;
+      font-weight: 500;
+      transition: 0.3s;
+      backdrop-filter: blur(5px);
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+    }
+
+    .nav-menu a:hover {
+      background: linear-gradient(90deg, #ffb6c1, #ff77a9);
+      color: #ff0055;
+      transform: scale(1.07);
+      box-shadow: 0 0 18px rgba(255, 140, 180, 0.4);
+      border-color: transparent;
+    }
+
+    /* ✅ TABS */
+    .progress-container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 20px;
+      border-bottom: 2px solid #ffd2e6;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      background: none;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: #666;
+      transition: 0.3s;
+    }
+
+    .tab.active {
+      color: #ff2da0;
+      border-bottom: 3px solid #ff2da0;
+    }
+
+    /* ✅ WORKS GRID */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      padding-bottom: 40px;
+    }
+
+    .work-card {
+      background: white;
+      padding: 15px;
+      border-radius: 18px;
+      box-shadow: 0 8px 18px rgba(255, 96, 143, 0.15);
+      text-align: center;
+      transition: 0.3s;
+      animation: popUp 0.5s ease;
+    }
+
+    @keyframes popUp {
+      from { opacity: 0; transform: scale(0.85); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .work-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(255, 0, 98, 0.22);
+    }
+
+    .work-card img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    /* ✅ RESPONSIVE */
+    @media (max-width: 780px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      header h1 {
+        font-size: 40px;
+      }
+
+      .nav-menu a {
+        font-size: 15px;
+        padding: 10px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div>
+      <h1>Craft Ur Fit</h1>
+      <p class="tagline">Soo what's on your mind today? 💭✨</p>
+    </div>
+
+    <div class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="canvas.html">Canvas</a>
+      <a href="login.html">Me</a>
+    </div>
+  </header>
+
+  <div class="progress-container">
+    <div class="tabs">
+      <button class="tab active">My Crafts</button>
+    </div>
+
+    <div id="inProgress" class="work-grid"></div>
+  </div>
+
+  <script>
+    function addDesignToWorks(imgDataURL) {
+      const card = document.createElement("div");
+      card.classList.add("work-card");
+
+      const img = document.createElement("img");
+      img.src = imgDataURL;
+      img.alt = "Design";
+
+      card.appendChild(img);
+      document.getElementById("inProgress").appendChild(card);
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const savedWorks = JSON.parse(localStorage.getItem("works")) || [];
+      savedWorks.forEach(work => {
+        addDesignToWorks(work.img);
+      });
+    });
+  </script>
+
+</body>
+</html>
