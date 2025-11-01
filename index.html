@@ -16,13 +16,9 @@
             margin: 0;
             padding: 0;
             font-family: "Poppins", sans-serif;
-            background: url("./images/bg3.jpg") center center / cover no-repeat fixed;
+            background: url(".images/bg3.jpg") center center / cover no-repeat fixed;
             color: black;
             scroll-behavior: smooth;
-        }
-
-        * {
-            box-sizing: border-box;
         }
 
         /* 🌟 HEADER / NAVBAR */
@@ -34,28 +30,35 @@
             background: linear-gradient(to right, #ff4b28, #ff228c);
             display: flex;
             justify-content: space-between;
+            /* ✅ Perfect spacing */
             align-items: center;
-            padding: 15px 50px;
+            padding: 12px 50px;
+            /* ✅ Smaller padding = balanced look */
             box-shadow: 0 4px 20px rgba(255, 34, 140, 0.25);
             z-index: 1000;
         }
 
         .logo {
             font-family: "Great Vibes", cursive;
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             font-weight: 600;
             background: linear-gradient(to right, #fff, #ffe7f3);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             cursor: pointer;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            /* ✅ Ensures perfect vertical alignment */
         }
 
         .nav-links {
             display: flex;
-            gap: 25px;
+            gap: 30px;
+            /* ✅ More even spacing */
             align-items: center;
         }
+
 
         .nav-links a {
             text-decoration: none;
@@ -69,28 +72,33 @@
             color: #ffe6f4;
         }
 
-        .login-btn {
-            background: white;
-            color: #ff228c !important;
-            padding: 8px 18px;
-            border-radius: 25px;
-            font-weight: 600;
-            box-shadow: 0 3px 10px rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-            white-space: nowrap;
-            margin-left: 10px;
-        }
-
-        .login-btn:hover {
-            transform: scale(1.05);
-            background: #ffe6f4;
-        }
-
         .menu-toggle {
             display: none;
             font-size: 1.8rem;
             color: white;
             cursor: pointer;
+        }
+
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: rgba(255, 255, 255, 0.95);
+                position: absolute;
+                top: 70px;
+                right: 0;
+                width: 220px;
+                padding: 20px;
+                border-radius: 10px 0 0 10px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
         }
 
         /* ✅ Animations */
@@ -134,6 +142,8 @@
             }
         }
 
+        
+
         /* ✅ Hero Section */
         .container {
             text-align: center;
@@ -143,7 +153,6 @@
             justify-content: center;
             align-items: center;
             animation: fadeSlide 1.4s ease forwards;
-            padding: 0 20px;
         }
 
         h1 {
@@ -154,7 +163,6 @@
             -webkit-text-fill-color: transparent;
             text-shadow: 2px 2px 8px rgba(255, 34, 140, 0.3);
             animation: float 3s ease-in-out infinite;
-            margin: 0;
         }
 
         p {
@@ -162,8 +170,6 @@
             font-size: 1.3rem;
             color: rgb(129, 124, 124);
             margin-bottom: 40px;
-            margin-top: 10px;
-            padding: 0 10px;
         }
 
         button {
@@ -247,13 +253,13 @@
         .footer {
             background: linear-gradient(135deg, #ff4b28 0%, #ff228c 100%);
             color: #ffe7f3;
-            padding: 60px 20px;
+            padding: 60px 80px;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 40px;
+            grid-template-columns: 1.4fr 1fr 1fr 1.5fr;
+            gap: 60px;
             max-width: 1300px;
             margin: auto;
         }
@@ -286,142 +292,6 @@
             border-radius: 6px;
             color: #fff;
         }
-
-        /* ✅ Login Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 10;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            backdrop-filter: blur(6px);
-            background-color: rgba(0, 0, 0, 0.4);
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .modal-content {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            max-width: 400px;
-            width: 100%;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            animation: fadeSlide 0.6s ease;
-        }
-
-        .modal-content h2 {
-            margin-bottom: 20px;
-            color: #ff228c;
-        }
-
-        .modal-content input {
-            width: 100%;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-        }
-
-        .close-btn {
-            background: #ff228c;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            margin-top: 15px;
-        }
-
-        .close-btn:hover {
-            background: #ff4b28;
-        }
-
-        /* 📱 RESPONSIVE DESIGN */
-        @media (max-width: 900px) {
-            .navbar {
-                padding: 15px 25px;
-            }
-
-            .logo {
-                font-size: 2rem;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                background: rgba(255, 255, 255, 0.95);
-                position: absolute;
-                top: 70px;
-                right: 0;
-                width: 220px;
-                padding: 20px;
-                border-radius: 10px 0 0 10px;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .login-btn {
-                background: linear-gradient(to right, #ff4b28, #ff228c);
-                color: white !important;
-            }
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2.6rem;
-            }
-
-            p {
-                font-size: 1.1rem;
-            }
-
-            button {
-                font-size: 1rem;
-                padding: 10px 28px;
-            }
-
-            .footer {
-                padding: 40px 15px;
-            }
-
-            .footer h3 {
-                font-size: 18px;
-            }
-
-            .footer p,
-            .footer a {
-                font-size: 13px;
-            }
-
-            .contact-section {
-                padding: 40px 15px;
-            }
-
-            .contact-section h2 {
-                font-size: 1.6rem;
-            }
-        }
-
-        @media (max-width: 900px) {
-            .nav-links a {
-                color: #ff228c !important;
-            }
-
-            .login-btn {
-                color: white !important;
-            }
-        }
     </style>
 </head>
 
@@ -433,7 +303,6 @@
             <a href="home.html">Home</a>
             <a href="canvas.html">Canvas</a>
             <a href="#contact">Contact Us</a>
-            <a href="javascript:void(0)" onclick="openModal()" class="login-btn">Sign In / Login</a>
         </nav>
         <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</div>
     </header>
@@ -442,7 +311,9 @@
     <div class="container">
         <h1>Welcome to Craft Ur Fit</h1>
         <p>Create, Customize, and Wear Your Imagination</p>
-        <button onclick="openModal()">Get Started</button>
+
+        <!-- ✅ BUTTON NOW REDIRECTS TO login.html -->
+        <button onclick="window.location.href='login.html'">Get Started</button>
     </div>
 
     <!-- ✅ CONTACT US SECTION -->
@@ -455,16 +326,6 @@
             <button type="submit">Send Message</button>
         </form>
     </section>
-
-    <!-- ✅ LOGIN MODAL -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <h2>Sign In to Craft Ur Fit</h2>
-            <input type="text" placeholder="Username or Email">
-            <input type="password" placeholder="Password">
-            <button class="close-btn" onclick="closeModal()">Login</button>
-        </div>
-    </div>
 
     <!-- ✅ FOOTER -->
     <footer class="footer">
@@ -499,24 +360,9 @@
         </div>
     </footer>
 
-    <!-- ✅ JS -->
+    <!-- ✅ JS (CONTACT FORM ONLY) -->
     <script>
-        function openModal() {
-            document.getElementById('loginModal').style.display = 'flex';
-        }
-
-        function closeModal() {
-            document.getElementById('loginModal').style.display = 'none';
-        }
-
-        window.onclick = function (event) {
-            const modal = document.getElementById('loginModal');
-            if (event.target === modal) {
-                closeModal();
-            }
-        };
-
-        // ✅ Success message on contact form submit
+        // Success message on contact form submit
         const form = document.querySelector('.contact-section form');
         form.addEventListener('submit', (e) => {
             e.preventDefault();
