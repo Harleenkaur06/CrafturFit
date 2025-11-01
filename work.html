@@ -1,218 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Works</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
   <style>
-    * {
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+      /* background: #f9f9f9; */
+      /* background: linear-gradient(to bottom right, #efc5d2, #ffeef6); */
+      /* background: linear-gradient(to bottom right, #fdfbff, #f3e8ff); */
+      /* background: #fff0f6; */
+    /* background: linear-gradient(to bottom right, #fff9fb, #ffeef6); */
+    /* background: linear-gradient(to bottom right, #ffffff, #f7f0ff); */
+    /* background: linear-gradient(to bottom right, #ffe5ec, #ffd6e8); */
+/* background: linear-gradient(to bottom right, #f3e8ff, #e9d8fd); */
+/* background: linear-gradient(to bottom right, #e8f0ff, #d6e8ff); */
+/* background: linear-gradient(to bottom right, #fff5fa, #ffeaf5); */
+/* background: linear-gradient(to bottom right, #fff0f5, #ffe6f0); */
+/* background: linear-gradient(to bottom right, #fff0f5, #fff5e6); */
+/* background: #ffe6eb; */
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
     }
+header {
+  max-width: 100%;
+  min-height: 100px;
+  background: linear-gradient(to right, #ff4b28, #ff228c);
+  display: flex;
+  justify-content: space-between; /* logo left, links right */
+  align-items: center;
+  padding: 0 40px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+header h1 {
+  margin: 0;
+  font-size: 60px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4, #fad390);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 3px;
+}
+header .nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    body {
-      background: linear-gradient(to bottom right, #ffe5ec, #fff5f9);
-      padding-bottom: 40px;
-    }
+header .logo {
+  font-size: 25px;
+  text-transform: uppercase;
+  margin:0;
+}
 
-    /* ✅ HEADER */
-    header {
-      width: 100%;
-      padding: 25px 40px;
-      background: linear-gradient(to right, #ff4b28, #ff228c);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: white;
-      border-bottom-left-radius: 25px;
-      border-bottom-right-radius: 25px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-    }
+header .nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 18px;
+}
 
-    header h1 {
-      font-size: 55px;
-      background: linear-gradient(to right, #ffb8c6, #ffe0e8, #fff7d1);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: float 3s ease-in-out infinite;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
+header .nav a:hover {
+  color: #ffe600; /* hover effect */
+}
+header .tagline {
+  font-size: 16px;
+  margin: 0;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
 
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-      100% { transform: translateY(0); }
-    }
-
-    .tagline {
-      font-size: 16px;
-      color: #fffbe9;
-      letter-spacing: 1px;
-      margin-top: -5px;
-    }
-
-    /* ✅ NAVIGATION CAPSULE BUTTONS */
-    .nav-menu {
-      display: flex;
-      gap: 15px;
-    }
-
-    .nav-menu a {
-      text-decoration: none;
-      background: rgba(255, 255, 255, 0.25);
-      padding: 12px 26px;
-      border-radius: 999px; /* capsule shape 💊 */
-      color: white;
-      font-size: 17px;
-      font-weight: 500;
-      transition: 0.3s;
-      backdrop-filter: blur(5px);
-      border: 2px solid rgba(255, 255, 255, 0.4);
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
-    }
-
-    .nav-menu a:hover {
-      background: linear-gradient(90deg, #ffb6c1, #ff77a9);
-      color: #ff0055;
-      transform: scale(1.07);
-      box-shadow: 0 0 18px rgba(255, 140, 180, 0.4);
-      border-color: transparent;
-    }
-
-    /* ✅ TABS */
     .progress-container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
+      width: 100%;
+      margin: 30px auto;
     }
 
+    /* Tabs */
     .tabs {
       display: flex;
       gap: 20px;
-      border-bottom: 2px solid #ffd2e6;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ddd;
     }
 
     .tab {
       background: none;
       border: none;
-      padding: 10px 15px;
       font-size: 1.2rem;
-      font-weight: 600;
+      font-weight: bold;
       cursor: pointer;
-      color: #666;
+      padding: 8px 10px;
       transition: 0.3s;
+      color: #555;
     }
 
     .tab.active {
-      color: #ff2da0;
-      border-bottom: 3px solid #ff2da0;
+      color: #ff228c;
+      border-bottom: 3px solid #ff228c;
     }
 
-    /* ✅ WORKS GRID */
+    /* Work Grid */
     .work-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 25px;
-      padding-bottom: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
     }
 
     .work-card {
-      background: white;
-      padding: 15px;
-      border-radius: 18px;
-      box-shadow: 0 8px 18px rgba(255, 96, 143, 0.15);
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 12px;
       text-align: center;
-      transition: 0.3s;
-      animation: popUp 0.5s ease;
-    }
-
-    @keyframes popUp {
-      from { opacity: 0; transform: scale(0.85); }
-      to { opacity: 1; transform: scale(1); }
+      transition: transform 0.2s;
     }
 
     .work-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 28px rgba(255, 0, 98, 0.22);
+      transform: scale(1.03);
     }
 
-    .work-card img {
-      width: 100%;
-      border-radius: 12px;
-    }
+    /* .work-card img {
+      width: 50%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    } */
+     .work-card img {
+  width: 100%;
+  max-width: 150px; /* prevents it from getting too large */
+  height: auto;
+}
 
-    /* ✅ RESPONSIVE */
-    @media (max-width: 780px) {
-      header {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-        padding: 30px 20px;
-      }
 
-      header h1 {
-        font-size: 40px;
-      }
+    
+    /*responsive */
+/*header mobile friendly*/
+    @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    text-align: center;
+  }
 
-      .nav-menu a {
-        font-size: 15px;
-        padding: 10px 18px;
-      }
-    }
+  header h1 {
+    font-size: 36px;
+  }
+
+  header .nav {
+    margin-top: 10px;
+  }
+
+  header .nav a {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+}
+
+/*progress conatiner*/
+.progress-container {
+  width: 50%;
+  margin: 30px auto;
+}
+
+@media (max-width: 1024px) {
+  .progress-container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .progress-container {
+    width: 90%;
+  }
+}
+/*smaller screen*/
+@media (max-width: 480px) {
+  .tabs {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .tab {
+    font-size: 1rem;
+    padding: 6px 8px;
+  }
+}
+/*work cards/images*/
+@media (max-width: 480px) {
+  .work-card img {
+    width: 70%; /* slightly larger but still responsive */
+  }
+  .progress-text {
+    font-size: 0.8rem;
+  }
+}
+
+/*ipad */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header .nav {
+    margin-top: 10px;
+    justify-content: center;
+  }
+}
+
   </style>
 </head>
-
 <body>
-
-  <header>
-    <div>
-      <h1>Craft Ur Fit</h1>
-      <p class="tagline">Soo what's on your mind today? 💭✨</p>
-    </div>
-
-    <div class="nav-menu">
-      <a href="index.html">Home</a>
-      <a href="canvas.html">Canvas</a>
-      <a href="login.html">Me</a>
-    </div>
-  </header>
+      <header>
+  <div class="logo">
+    <h1>Craft Ur Fit</h1>
+    <p class="tagline">Soo What's on your mind today?</p>
+  </div>
+  
+  <div class="nav">
+    <a href="/home.html">Home</a>
+    <a href="/canvas.html">Canvas</a>
+    <a href="#">Me</a>
+  </div>
+</header>
 
   <div class="progress-container">
+    <!-- Tabs -->
     <div class="tabs">
-      <button class="tab active">My Crafts</button>
+      <button class="tab active" onclick="showTab('inProgress')">My crafts</button>
+      <!-- <button class="tab" onclick="showTab('finished')">Finished</button> -->
     </div>
 
-    <div id="inProgress" class="work-grid"></div>
+    <!-- In Progress Works -->
+    <div id="inProgress" class="work-grid">
+      
+    </div>
   </div>
-
   <script>
-    function addDesignToWorks(imgDataURL) {
-      const card = document.createElement("div");
-      card.classList.add("work-card");
+// Show tab (only one tab now)
+function showTab() {
+  const tabs = document.querySelectorAll(".tab");
+  tabs.forEach(tab => tab.classList.remove("active"));
+  tabs[0].classList.add("active");
+}
 
-      const img = document.createElement("img");
-      img.src = imgDataURL;
-      img.alt = "Design";
+// Add Design Card (only image + label)
+function addDesignToWorks(imgDataURL) {
+  const card = document.createElement("div");
+  card.classList.add("work-card");
 
-      card.appendChild(img);
-      document.getElementById("inProgress").appendChild(card);
-    }
+  const img = document.createElement("img");
+  img.src = imgDataURL;
+  img.alt = "Custom Design";
 
-    window.addEventListener("DOMContentLoaded", () => {
-      const savedWorks = JSON.parse(localStorage.getItem("works")) || [];
-      savedWorks.forEach(work => {
-        addDesignToWorks(work.img);
-      });
-    });
-  </script>
+  card.appendChild(img);
+  document.getElementById("inProgress").appendChild(card);
+}
+
+// Load Saved Works
+window.addEventListener("DOMContentLoaded", () => {
+  const savedWorks = JSON.parse(localStorage.getItem("works")) || [];
+  savedWorks.forEach(work => {
+    addDesignToWorks(work.img, work.status);
+  });
+});
+</script>
 
 </body>
 </html>
