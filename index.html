@@ -419,10 +419,13 @@
     <div class="logo">Craft Ur Fit</div>
     <nav class="nav-links">
       <a href="#">Home</a>
-      <a href="#">Canvas</a>
+      <a href="canvas.html">Canvas</a>
       <a href="#contact">Contact Us</a>
-      <a href="javascript:void(0)" onclick="openModal()" class="login-btn">Sign In / Login</a>
+
+      <!-- ✅ CHANGED TO OPEN signup.html -->
+      <a href="signup.html" class="login-btn">Sign In / Login</a> 
     </nav>
+
     <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</div>
   </header>
 
@@ -430,7 +433,9 @@
   <div class="container">
     <h1>Welcome to Craft Ur Fit</h1>
     <p>Create, Customize, and Wear Your Imagination</p>
-    <button onclick="openModal()">Get Started</button>
+
+    <!-- ✅ CHANGED TO signup.html -->
+    <button onclick="location.href='signup.html'">Get Started</button>
   </div>
 
   <!-- ✅ CONTACT US SECTION -->
@@ -444,7 +449,7 @@
     </form>
   </section>
 
-  <!-- ✅ LOGIN MODAL -->
+  <!-- ✅ LOGIN MODAL (still works if needed later) -->
   <div id="loginModal" class="modal">
     <div class="modal-content">
       <h2>Sign In to Craft Ur Fit</h2>
