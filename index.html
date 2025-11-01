@@ -2,529 +2,536 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Craft Ur Fit – Welcome</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Craft Ur Fit – Welcome</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600&family=Playfair+Display:wght@600&display=swap"
+        rel="stylesheet">
 
-  <style>
-    /* ✅ General Page */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Poppins", sans-serif;
-      background: url("./images/bg3.jpg") center center / cover no-repeat fixed;
-      color: black;
-      scroll-behavior: smooth;
-    }
+    <style>
+        /* ✅ General Page */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: url("bg3.jpg") center center / cover no-repeat fixed;
+            color: black;
+            scroll-behavior: smooth;
+        }
 
-    * {
-      box-sizing: border-box;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    /* 🌟 HEADER / NAVBAR */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: linear-gradient(to right, #ff4b28, #ff228c);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 50px;
-      box-shadow: 0 4px 20px rgba(255, 34, 140, 0.25);
-      z-index: 1000;
-    }
+        /* 🌟 HEADER / NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to right, #ff4b28, #ff228c);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            box-shadow: 0 4px 20px rgba(255, 34, 140, 0.25);
+            z-index: 1000;
+        }
 
-    .logo {
-      font-family: "Great Vibes", cursive;
-      font-size: 2.4rem;
-      font-weight: 600;
-      background: linear-gradient(to right, #fff, #ffe7f3);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      cursor: pointer;
-      letter-spacing: 1.5px;
-    }
+        .logo {
+            font-family: "Great Vibes", cursive;
+            font-size: 2.4rem;
+            font-weight: 600;
+            background: linear-gradient(to right, #fff, #ffe7f3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            cursor: pointer;
+            letter-spacing: 1.5px;
+        }
 
-    .nav-links {
-      display: flex;
-      gap: 25px;
-      align-items: center;
-    }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
 
-    .nav-links a {
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-      font-size: 1rem;
-      transition: 0.3s ease;
-    }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: 0.3s ease;
+        }
 
-    .nav-links a:hover {
-      color: #ffe6f4;
-    }
+        .nav-links a:hover {
+            color: #ffe6f4;
+        }
 
-    .login-btn {
-      background: white;
-      color: #ff228c !important;
-      padding: 8px 18px;
-      border-radius: 25px;
-      font-weight: 600;
-      box-shadow: 0 3px 10px rgba(255, 255, 255, 0.3);
-      transition: all 0.3s ease;
-      white-space: nowrap;
-      margin-left: 10px;
-    }
+        .login-btn {
+            background: white;
+            color: #ff228c !important;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-weight: 600;
+            box-shadow: 0 3px 10px rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            margin-left: 10px;
+        }
 
-    .login-btn:hover {
-      transform: scale(1.05);
-      background: #ffe6f4;
-    }
+        .login-btn:hover {
+            transform: scale(1.05);
+            background: #ffe6f4;
+        }
 
-    .menu-toggle {
-      display: none;
-      font-size: 1.8rem;
-      color: white;
-      cursor: pointer;
-    }
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            color: white;
+            cursor: pointer;
+        }
 
-    /* ✅ Animations */
-    @keyframes fadeSlide {
-      0% {
-        opacity: 0;
-        transform: translateY(40px);
-      }
+        /* ✅ Animations */
+        @keyframes fadeSlide {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
 
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    @keyframes float {
-      0% {
-        transform: translateY(0px);
-      }
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
 
-      50% {
-        transform: translateY(-10px);
-      }
+            50% {
+                transform: translateY(-10px);
+            }
 
-      100% {
-        transform: translateY(0px);
-      }
-    }
+            100% {
+                transform: translateY(0px);
+            }
+        }
 
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
 
-      50% {
-        transform: scale(1.06);
-      }
+            50% {
+                transform: scale(1.06);
+            }
 
-      100% {
-        transform: scale(1);
-      }
-    }
+            100% {
+                transform: scale(1);
+            }
+        }
 
-    /* ✅ Hero Section */
-    .container {
-      text-align: center;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      animation: fadeSlide 1.4s ease forwards;
-      padding: 0 20px;
-    }
+        /* ✅ Hero Section */
+        .container {
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fadeSlide 1.4s ease forwards;
+            padding: 0 20px;
+        }
 
-    h1 {
-      font-family: "Great Vibes", cursive;
-      font-size: 4rem;
-      background: linear-gradient(to right, #ff4b28, #ff228c);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 2px 2px 8px rgba(255, 34, 140, 0.3);
-      animation: float 3s ease-in-out infinite;
-      margin: 0;
-    }
+        h1 {
+            font-family: "Great Vibes", cursive;
+            font-size: 4rem;
+            background: linear-gradient(to right, #ff4b28, #ff228c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 8px rgba(255, 34, 140, 0.3);
+            animation: float 3s ease-in-out infinite;
+            margin: 0;
+        }
 
-    p {
-      font-family: "Playfair Display", serif;
-      font-size: 1.3rem;
-      color: rgb(129, 124, 124);
-      margin-bottom: 40px;
-      margin-top: 10px;
-      padding: 0 10px;
-    }
+        p {
+            font-family: "Playfair Display", serif;
+            font-size: 1.3rem;
+            color: rgb(129, 124, 124);
+            margin-bottom: 40px;
+            margin-top: 10px;
+            padding: 0 10px;
+        }
 
-    button {
-      background: linear-gradient(to right, #ff4b28, #ff228c);
-      color: white;
-      font-size: 1.1rem;
-      padding: 12px 35px;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      animation: pulse 2s infinite ease-in-out;
-    }
+        button {
+            background: linear-gradient(to right, #ff4b28, #ff228c);
+            color: white;
+            font-size: 1.1rem;
+            padding: 12px 35px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite ease-in-out;
+        }
 
-    button:hover {
-      transform: scale(1.07);
-      box-shadow: 0 0 20px rgba(255, 34, 140, 0.7),
-        0 0 40px rgba(255, 34, 140, 0.5);
-    }
+        button:hover {
+            transform: scale(1.07);
+            box-shadow: 0 0 20px rgba(255, 34, 140, 0.7),
+                0 0 40px rgba(255, 34, 140, 0.5);
+        }
 
-    /* ✅ Contact Us Section */
-    .contact-section {
-      background: rgba(255, 255, 255, 0.85);
-      padding: 60px 20px;
-      text-align: center;
-      backdrop-filter: blur(5px);
-    }
+        /* ✅ Contact Us Section */
+        .contact-section {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 60px 20px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
 
-    .contact-section h2 {
-      color: #ff228c;
-      font-family: "Playfair Display", serif;
-      font-size: 2rem;
-    }
+        .contact-section h2 {
+            color: #ff228c;
+            font-family: "Playfair Display", serif;
+            font-size: 2rem;
+        }
 
-    .contact-section form {
-      max-width: 600px;
-      margin: 30px auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
+        .contact-section form {
+            max-width: 600px;
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
-    .contact-section input,
-    .contact-section textarea {
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-family: "Poppins", sans-serif;
-    }
+        .contact-section input,
+        .contact-section textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: "Poppins", sans-serif;
+        }
 
-    .contact-section button {
-      align-self: center;
-      width: fit-content;
-    }
+        .contact-section button {
+            align-self: center;
+            width: fit-content;
+        }
 
-    /* ✅ Success Message */
-    .success-message {
-      position: fixed;
-      top: 90px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(to right, #ff4b28, #ff228c);
-      color: white;
-      padding: 12px 25px;
-      border-radius: 25px;
-      box-shadow: 0 4px 15px rgba(255, 34, 140, 0.3);
-      font-weight: 500;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.6s ease;
-      z-index: 2000;
-    }
+        /* ✅ Success Message */
+        .success-message {
+            position: fixed;
+            top: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(to right, #ff4b28, #ff228c);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(255, 34, 140, 0.3);
+            font-weight: 500;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.6s ease;
+            z-index: 2000;
+        }
 
-    .success-message.show {
-      opacity: 1;
-      visibility: visible;
-    }
+        .success-message.show {
+            opacity: 1;
+            visibility: visible;
+        }
 
-    /* ✅ Footer */
-    .footer {
-      background: linear-gradient(135deg, #ff4b28 0%, #ff228c 100%);
-      color: #ffe7f3;
-      padding: 60px 20px;
-    }
+        /* ✅ Footer */
+        .footer {
+            background: linear-gradient(135deg, #ff4b28 0%, #ff228c 100%);
+            color: #ffe7f3;
+            padding: 60px 20px;
+        }
 
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 40px;
-      max-width: 1300px;
-      margin: auto;
-    }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            max-width: 1300px;
+            margin: auto;
+        }
 
-    .footer h3 {
-      margin-top: 0;
-      color: #fff;
-      font-size: 22px;
-      margin-bottom: 18px;
-    }
+        .footer h3 {
+            margin-top: 0;
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
 
-    .footer p,
-    .footer a {
-      font-size: 14px;
-      line-height: 1.7;
-      color: #ffe7f3;
-      text-decoration: none;
-    }
+        .footer p,
+        .footer a {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #ffe7f3;
+            text-decoration: none;
+        }
 
-    .footer a:hover {
-      color: #fff;
-      text-decoration: underline;
-    }
+        .footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
 
-    .maps-btn {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.18);
-      padding: 10px 14px;
-      margin-top: 15px;
-      border-radius: 6px;
-      color: #fff;
-    }
+        .maps-btn {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.18);
+            padding: 10px 14px;
+            margin-top: 15px;
+            border-radius: 6px;
+            color: #fff;
+        }
 
-    /* ✅ Login Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 10;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      backdrop-filter: blur(6px);
-      background-color: rgba(0, 0, 0, 0.4);
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
+        /* ✅ Login Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(6px);
+            background-color: rgba(0, 0, 0, 0.4);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-    .modal-content {
-      background: white;
-      border-radius: 12px;
-      padding: 30px;
-      max-width: 400px;
-      width: 100%;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
-      text-align: center;
-      animation: fadeSlide 0.6s ease;
-    }
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeSlide 0.6s ease;
+        }
 
-    .modal-content h2 {
-      margin-bottom: 20px;
-      color: #ff228c;
-    }
+        .modal-content h2 {
+            margin-bottom: 20px;
+            color: #ff228c;
+        }
 
-    .modal-content input {
-      width: 100%;
-      margin: 10px 0;
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
+        .modal-content input {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
 
-    .close-btn {
-      background: #ff228c;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-top: 15px;
-    }
+        .close-btn {
+            background: #ff228c;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
 
-    .close-btn:hover {
-      background: #ff4b28;
-    }
+        .close-btn:hover {
+            background: #ff4b28;
+        }
 
-    /* 📱 RESPONSIVE DESIGN */
-    @media (max-width: 900px) {
-      .navbar {
-        padding: 15px 25px;
-      }
+        /* 📱 RESPONSIVE DESIGN */
+        @media (max-width: 900px) {
+            .navbar {
+                padding: 15px 25px;
+            }
 
-      .logo {
-        font-size: 2rem;
-      }
+            .logo {
+                font-size: 2rem;
+            }
 
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background: rgba(255, 255, 255, 0.95);
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 220px;
-        padding: 20px;
-        border-radius: 10px 0 0 10px;
-      }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: rgba(255, 255, 255, 0.95);
+                position: absolute;
+                top: 70px;
+                right: 0;
+                width: 220px;
+                padding: 20px;
+                border-radius: 10px 0 0 10px;
+            }
 
-      .nav-links.active {
-        display: flex;
-      }
+            .nav-links.active {
+                display: flex;
+            }
 
-      .menu-toggle {
-        display: block;
-      }
+            .menu-toggle {
+                display: block;
+            }
 
-      .login-btn {
-        background: linear-gradient(to right, #ff4b28, #ff228c);
-        color: white !important;
-      }
-    }
+            .login-btn {
+                background: linear-gradient(to right, #ff4b28, #ff228c);
+                color: white !important;
+            }
+        }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2.6rem;
-      }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.6rem;
+            }
 
-      p {
-        font-size: 1.1rem;
-      }
+            p {
+                font-size: 1.1rem;
+            }
 
-      button {
-        font-size: 1rem;
-        padding: 10px 28px;
-      }
+            button {
+                font-size: 1rem;
+                padding: 10px 28px;
+            }
 
-      .footer {
-        padding: 40px 15px;
-      }
+            .footer {
+                padding: 40px 15px;
+            }
 
-      .footer h3 {
-        font-size: 18px;
-      }
+            .footer h3 {
+                font-size: 18px;
+            }
 
-      .footer p,
-      .footer a {
-        font-size: 13px;
-      }
+            .footer p,
+            .footer a {
+                font-size: 13px;
+            }
 
-      .contact-section {
-        padding: 40px 15px;
-      }
+            .contact-section {
+                padding: 40px 15px;
+            }
 
-      .contact-section h2 {
-        font-size: 1.6rem;
-      }
-    }
-  </style>
+            .contact-section h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .nav-links a {
+                color: #ff228c !important;
+            }
+
+            .login-btn {
+                color: white !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <!-- 🌟 HEADER -->
-  <header class="navbar">
-    <div class="logo">Craft Ur Fit</div>
-    <nav class="nav-links">
-      <a href="home.html">Home</a>
-      <a href="canvas.html">Canvas</a>
-      <a href="#contact">Contact Us</a>
+    <!-- 🌟 HEADER -->
+    <header class="navbar">
+        <div class="logo">Craft Ur Fit</div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Canvas</a>
+            <a href="#contact">Contact Us</a>
+            <a href="javascript:void(0)" onclick="openModal()" class="login-btn">Sign In / Login</a>
+        </nav>
+        <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</div>
+    </header>
 
-      <!-- ✅ CHANGED TO OPEN signup.html -->
-      <a href="signup.html" class="login-btn">Sign In / Login</a> 
-    </nav>
-
-    <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</div>
-  </header>
-
-  <!-- ✅ HERO SECTION -->
-  <div class="container">
-    <h1>Welcome to Craft Ur Fit</h1>
-    <p>Create, Customize, and Wear Your Imagination</p>
-
-    <!-- ✅ CHANGED TO signup.html -->
-    <button onclick="location.href='signup.html'">Get Started</button>
-  </div>
-
-  <!-- ✅ CONTACT US SECTION -->
-  <section id="contact" class="contact-section">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="4" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <!-- ✅ LOGIN MODAL (still works if needed later) -->
-  <div id="loginModal" class="modal">
-    <div class="modal-content">
-      <h2>Sign In to Craft Ur Fit</h2>
-      <input type="text" placeholder="Username or Email">
-      <input type="password" placeholder="Password">
-      <button class="close-btn" onclick="closeModal()">Login</button>
+    <!-- ✅ HERO SECTION -->
+    <div class="container">
+        <h1>Welcome to Craft Ur Fit</h1>
+        <p>Create, Customize, and Wear Your Imagination</p>
+        <button onclick="openModal()">Get Started</button>
     </div>
-  </div>
 
-  <!-- ✅ FOOTER -->
-  <footer class="footer">
-    <div class="footer-grid">
-      <div>
-        <h3>Address</h3>
-        <p>Craft Ur Fit Studio<br>Creative Street 21<br>Chandigarh, Punjab<br>India</p>
-        <p>Phone: +91 98765 43210</p>
-        <p>Email: support@crafturfit.com</p>
-        <a class="maps-btn" href="#">Locate Us →</a>
-      </div>
+    <!-- ✅ CONTACT US SECTION -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
-      <div>
-        <h3>Legal</h3>
-        <p><a href="#">Terms & Conditions</a></p>
-        <p><a href="#">Privacy Policy</a></p>
-        <p><a href="#">Return Policy</a></p>
-      </div>
-
-      <div>
-        <h3>Quick Links</h3>
-        <p><a href="#">Contact Us</a></p>
-        <p><a href="#">Customize T-Shirt</a></p>
-        <p><a href="#">My Orders</a></p>
-        <p><a href="#">FAQs</a></p>
-      </div>
-
-      <div>
-        <h3>Latest Update</h3>
-        <p>“New AI-assisted pattern designer launching soon!”<br><br><strong>#CraftUrFit</strong></p>
-      </div>
+    <!-- ✅ LOGIN MODAL -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <h2>Sign In to Craft Ur Fit</h2>
+            <input type="text" placeholder="Username or Email">
+            <input type="password" placeholder="Password">
+            <button class="close-btn" onclick="closeModal()">Login</button>
+        </div>
     </div>
-  </footer>
 
-  <!-- ✅ JS -->
-  <script>
-    function openModal() {
-      document.getElementById('loginModal').style.display = 'flex';
-    }
+    <!-- ✅ FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h3>Address</h3>
+                <p>Craft Ur Fit Studio<br>Creative Street 21<br>Chandigarh, Punjab<br>India</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>Email: support@crafturfit.com</p>
+                <a class="maps-btn" href="#">Locate Us →</a>
+            </div>
 
-    function closeModal() {
-      document.getElementById('loginModal').style.display = 'none';
-    }
+            <div>
+                <h3>Legal</h3>
+                <p><a href="#">Terms & Conditions</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="#">Return Policy</a></p>
+            </div>
 
-    window.onclick = function (event) {
-      const modal = document.getElementById('loginModal');
-      if (event.target === modal) {
-        closeModal();
-      }
-    };
+            <div>
+                <h3>Quick Links</h3>
+                <p><a href="#">Contact Us</a></p>
+                <p><a href="#">Customize T-Shirt</a></p>
+                <p><a href="#">My Orders</a></p>
+                <p><a href="#">FAQs</a></p>
+            </div>
 
-    // ✅ Success message on contact form submit
-    const form = document.querySelector('.contact-section form');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const msg = document.createElement('div');
-      msg.className = 'success-message';
-      msg.textContent = '✅ Your message has been sent successfully!';
-      document.body.appendChild(msg);
-      setTimeout(() => msg.classList.add('show'), 100);
-      setTimeout(() => {
-        msg.classList.remove('show');
-        setTimeout(() => msg.remove(), 600);
-      }, 3000);
-      form.reset();
-    });
-  </script>
+            <div>
+                <h3>Latest Update</h3>
+                <p>“New AI-assisted pattern designer launching soon!”<br><br><strong>#CraftUrFit</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ✅ JS -->
+    <script>
+        function openModal() {
+            document.getElementById('loginModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('loginModal').style.display = 'none';
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('loginModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+
+        // ✅ Success message on contact form submit
+        const form = document.querySelector('.contact-section form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const msg = document.createElement('div');
+            msg.className = 'success-message';
+            msg.textContent = '✅ Your message has been sent successfully!';
+            document.body.appendChild(msg);
+            setTimeout(() => msg.classList.add('show'), 100);
+            setTimeout(() => {
+                msg.classList.remove('show');
+                setTimeout(() => msg.remove(), 600);
+            }, 3000);
+            form.reset();
+        });
+    </script>
 </body>
 
 </html>
